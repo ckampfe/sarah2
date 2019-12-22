@@ -52,8 +52,6 @@
   (let [[left right] (split-at (/ (count s) 2) s)]
     (clojure.string/join (mapcat (fn [a b] [a b]) left right))))
 
-(= "attack_at_dawn" (unpermute (permute "attack_at_dawn")))
-
 (defn next-highest-power-of-2 [n]
   (last (take-while (fn [i] (>= n (/ i 2)))
                     (map (fn [i] (Math/pow 2 i))
